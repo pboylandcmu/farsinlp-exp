@@ -88,10 +88,11 @@ def afterTurbo(data,allorthree):
 def main(devortest):
     beforeTurbo(getEvalData(devortest))
     subprocess.run(["../TurboParser-202/TurboParser", "--test", "--evaluate", "--file_model=models/unnorm_700_parser.model", "--file_test=tmp/cleared.conll", "--file_prediction=tmp/predicted.conll"])
+    print("score on all sentences in the test set")
     afterTurbo(getEvalData(devortest),False)
+    print("score on sentences in the test set which contain strings of multiple nouns")
     afterTurbo(getEvalData(devortest),True)
 
 
 if __name__ == "__main__":
-    main(False)
     main(True)

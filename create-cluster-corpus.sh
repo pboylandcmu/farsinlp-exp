@@ -1,4 +1,4 @@
-python conll-to-text.py
+#python conll-to-text.py
 #python empty-conlll.py I think this is only needed to
 ../brown-cluster/wcluster --text tmp/raw-lemmas.txt --c $1
 python usedictvar.py raw-lemmas-c$1-p1.out/map $1
